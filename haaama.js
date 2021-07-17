@@ -418,15 +418,15 @@ client.on('message', message => {
 
 
 
-const {
 
-  PREFIX,
 
-  approveemoji,
 
-  denyemoji
 
-} = require(`../config.json`);
+
+
+
+
+
 
 const db = require('quick.db');
 
