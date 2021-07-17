@@ -1,41 +1,39 @@
 
 const ms = require ('ms')
+let Timer = args[0];
+
+  if(!args[0]){
+
+    return message.channel.send(":x: " + "| Please Enter a time period followed by \"s or m or h\"");
+
+  }
+
+  if(args[0] <= 0){
+
+    return message.channel.send(":x: " + "| Please Enter a time period followed by \"s or m or h\"");
+
+  }
+
+  message.channel.send(":white_check_mark: " + "| Timer Started for: " + `${ms(ms(Timer), {long: true})}`)
+
+  setTimeout(function(){
+
+    message.channel.send(message.author.toString() + ` The Timer Has FINISHED!, it lasted: ${ms(ms(Timer), {long: true})}`)
+
+  }, ms(Timer));
+
+}
+
+module.exports.help = {
+
+    name: "timer"
+
+}
 
 
-    if(command === "timer"){
 
-        let Timer = args[0];
 
- 
 
- 
 
-        if(!args[0]){
 
-            return message.channel.send("Usage: prefix + timer + Duration + s|m|h")
 
-        }
-
- 
-
-        if(args[0] <= 0){
-
-            return message.channel.send("Usage: prefix + timer + Duration + s|m|h")
-
-        
-
- 
-
-        message.channel.send("Time is start:"+ ms(ms(Timer), {long: true}))
-
-        setTimeout(function(){
-
- 
-
-          message.channel.send(message.author.toString()+ `Time is Done,: ${ms(ms(Timer), {long: true})}`)
-
-        }, ms(Timer));
-
-    }
-
-});
