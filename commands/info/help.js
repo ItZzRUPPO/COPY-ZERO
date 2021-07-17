@@ -37,15 +37,15 @@ module.exports = {
 
 <a:gifland_kedicikbeyaz:792364864089358346>︙**Gifs**
 \`boy\`, \`girl\`, \`anime\`,
-\`animal\`, \`baby\`, \`love\`,
-\`emoji\`, 
+\`smoke\`, \`baby\`, \`love\`,
+\`neon\`, 
 
 <a:emoji_49:863080675346350080>︙**Photos** 
 \`Pboy\`, \`Pgirl\`, \`Panime\`,
-\`Pneon\`, \`Pbaby\`, \`Plove\`,
+\`Pcartoon\`, \`Pbaby\`, \`Plove\`,
 \`Psmoke\`
 
-<a:emoji_199:864142531758260234>︙Links
+<a:emoji_199:864142531758260234>︙**Links**
 [Server](https://discord.gg/yyJKH4NGuQ)**-**[Invite](https://discord.com/api/oauth2/authorize?client_id=814608707412295780&permissions=8&scope=bot)
 
   
