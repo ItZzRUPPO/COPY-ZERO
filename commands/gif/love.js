@@ -3,9 +3,9 @@ const { MessageEmbed } = require("discord.js");
 const { Prefix } = require("../../config.js");
 
 module.exports = {
-  name: "couple",
-  aliases: ["Couple"],
-  description: "Show Gif",
+  name: "love",
+  aliases: ["love"],
+  description: "Gif",
   usage: "Gif",
   run: async (client, message, args) => {
    
@@ -15,7 +15,7 @@ module.exports = {
     
     let gifembed = new Discord.MessageEmbed()
 
-    .setTitle("Couple Gif")
+    .setTitle("love")
     
       .setColor("RANDOM")
     .setFooter(`${message.author.tag} `, message.author.avatarURL)
