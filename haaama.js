@@ -331,7 +331,21 @@ client.on("message", message => {
   }
 });
 
+const badword = ["qaz", "mrishk","helka"];// baddle xow wsha bxara am kawanaya
 
+ client.on('message',async message => {
+
+if (badword.some(d => message.content.toLowerCase().includes(d))) {
+
+message.reply(`dont say any badword pls`);
+
+message.delete();
+
+const bawan = message.member;
+
+bawan.roles.add('Muted');
+
+ }})
 
 
   
