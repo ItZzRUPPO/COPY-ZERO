@@ -482,8 +482,6 @@ client.on('message',async message => {
 
 
 
-const moment = require("moment-timezone");
-
  function duration(ms) {
 
     const sec = Math.floor((ms / 1000) % 60).toString();
