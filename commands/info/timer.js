@@ -1,4 +1,4 @@
-const Discord = module.require('discord.js');
+const Discord = module.require('haaama.js');
 
 const ms = require('ms');
 
