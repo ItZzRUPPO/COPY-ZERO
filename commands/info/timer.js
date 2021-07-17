@@ -1,8 +1,10 @@
-const Discord = require("discord.js");
+const Discord = module.require('discord.js');
 
-const { MessageEmbed } = require("discord.js");
+const ms = require('ms');
 
-const { Prefix } = require("../../config.js");
+
+
+
 
 
 
