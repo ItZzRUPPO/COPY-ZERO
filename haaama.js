@@ -480,67 +480,52 @@ client.on('message',async message => {
 
   })
     
-
-
-
+const { MessageEmbed } = require("discord.js");
 
 module.exports = {
 
-  name: "botinfo",
+  name: "respect",
 
-  aliases: [],
+  aliases: ["resp"],
 
-  description: "Pong!",
+  description: "Help Command!",
 
-  usage: "Ping",
+  usage: "o/Help | <Command Name>",
 
-  run: async (client, message, args) => {
+  run: async(client, message, args) => {
 
-const created = moment(client.user.createdAt).format("YYYY-MM-DD");
+    let embed = new Discord.MessageEmbed()
 
-     
+      .setColor("")
 
-       let embed = new Discord.MessageEmbed()
+      .setFooter(`Press F to pay respect`)
 
-        .setTitle(`Info ${client.user.username}`)
+      .setDescription(`${message.member} has paid their respect${args.length ? ` to ${args.join(' ')}.` : ''}`)
 
-        .setColor("f1c40f")
+    
 
-        .setThumbnail(client.user.displayAvatarURL())
+message.channel.send(embed);
 
-        .addField(`**My Name:**`,`${client.user.tag}`)
+    await message.delete().catch(() => null);
 
-        .addField(`**My ID**`,`${client.user.id}`)
+    return message.react("Ⓕ")
 
-        .addField(`**My Prefix**`,`k?`)
+  }
 
-        .addField(`**Libary**`,`discord.js`)
+};
 
-        .addField(`**Discord.js Version**`,`${Discord.version}`)
 
-        .addField(`**Created At:**`,`[**${created}**]`)
 
-        .addField(`**Ping**`,`${Math.round(client.ws.ping)}ms`)
 
-        .addField(`**Guilds**`,`${client.guilds.cache.size}`)
 
-        .addField(`**Channels**`,`${client.channels.cache.size}`)
-
-        .addField(`**Users**`,`${client.users.cache.size}`)
-
-        .addField(`**Creator**`,`[<@856199357396156436>]`)
-
-        .setFooter(`Requested By ${message.author.username}`)
-
-        .setTimestamp();
 
        
 
-        message.channel.send(embed);
 
-}
 
-}
+
+
+
 
 
         
