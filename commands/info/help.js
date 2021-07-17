@@ -17,30 +17,30 @@ module.exports = {
 
     .setDescription(`
  
-<a:emoji_197:864136523410571295>︙**Info** 
+<a:king:864136523410571295>︙**Info** 
 \`help\`, \`ping\`, \`Server\`,
 \`userinfo\`, \`invite\`, \`uptime\`
 \`say\`, \`uinvite\`, \`roles\`
 \`stats\`, \`listemoji\`, \`se\`,
 \`weather\`,\`timer\`,\`avatar\`
 
-<a:banned:863095808572522547>︙**Moderation** 
+<a:ban:863095808572522547>︙**Moderation** 
 \`ban\`, \`unban\`, \`kick\`,
 \`mute\`, \`unmute\`, \`clear\`
 \`lock\`, \`unlock\`, \`slowmode\`
 \`nick\`, \`hide\`, \`unhide\` 
 \`vmute\`,\`vunmute\`,\`vkick\`
 
-<a:gifland_tatlisbeyaz:864551590354223104>︙**Fun**
+<a:3HyperBlob:863095794570362919>︙**Fun**
 \`ascii\`, \`iq\`, \`rps\`,
 \`howgay\`, \`rate\`
 
-<a:gifland_kedicikbeyaz:792364864089358346>︙**Gifs**
+:-<a:gifland_tatlisbeyaz:864551590354223104>︙**Gifs**
 \`boy\`, \`girl\`, \`anime\`,
 \`smoke\`, \`baby\`, \`love\`,
 \`neon\`
 
-<a:emoji_49:863080675346350080>︙**Photos** 
+<a:gifland_kedicikbeyaz:792364864089358346>︙**Photos** 
 \`Pboy\`, \`Pgirl\`, \`Panime\`,
 \`Pcartoon\`, \`Pbaby\`, \`Plove\`,
 \`Psmoke\`
