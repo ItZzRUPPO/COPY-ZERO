@@ -337,9 +337,9 @@ const badword = ["quz", "dakt","kerm","quzi","xushkt"];// baddle xow wsha bxara 
 
 if (badword.some(d => message.content.toLowerCase().includes(d))) {
 
-message.reply(`No mistakes fucker`);
-
 message.delete();
+
+message.reply(`No mistakes fucker`);
 
 const bawan = message.member;
 
