@@ -1,6 +1,10 @@
-onst Discord = module.require('discord.js');
+const Discord = require("discord.js");
 
-const ms = require('fs');
+const { MessageEmbed } = require("discord.js");
+
+const { Prefix } = require("../../config.js");
+
+const ms = require('ms');
 
 module.exports.run = async (bot, message, args) => {
 
