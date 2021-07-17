@@ -481,29 +481,12 @@ client.on('message',async message => {
   })
     
 
-client.on('message', message => {
 
-    if(message.content === "bot") {
 
-        const embed = new Discord.MessageEmbed()
 
-        .setColor("RANDOM")
 
-        .setDescription(`
 
- 
 
-**NAME**  ~ SMSM
-
- 
-
-**Servers**🌐 **__${client.guilds.cache.size}__**
-
-**Users**👥 **__${client.users.cache.size}__**
-
-**Channels**📚 **__${client.channels.cache.size}__**
-
-**Owner** ~  BAWAN
 
  
 
@@ -511,13 +494,12 @@ client.on('message', message => {
 
  
 
-`)
 
-               message.channel.send(embed);
 
-           }
 
-});
+
+      
+
   
 
   
