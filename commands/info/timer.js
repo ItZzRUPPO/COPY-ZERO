@@ -4,7 +4,7 @@ const { MessageEmbed } = require("discord.js");
 
 const { Prefix } = require("../../config.js");
 
-const ms = require('ms');
+
 
 module.exports = {
 
