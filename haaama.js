@@ -416,7 +416,7 @@ client.on('message', message => {
 });
 
 
-const { Client, Collection, MessageEmbed } = require(`discord.js`);
+
 
 const {
 
