@@ -1,13 +1,6 @@
 
 const ms = require ('ms')
 
-client.on('message', message => {
-
-    const args = message.content.slice(prefix.length).trim().split(/ +/g);
-
-    const command = args.shift().toLowerCase();
-
- 
 
     if(command === "timer"){
 
@@ -29,7 +22,7 @@ client.on('message', message => {
 
             return message.channel.send("Usage: prefix + timer + Duration + s|m|h")
 
-        }
+        
 
  
 
