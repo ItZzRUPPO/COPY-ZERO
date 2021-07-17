@@ -479,10 +479,10 @@ client.on('message',async message => {
 };   
 
   })
-
+    function duration(ms) {
     const { stripIndents } = require("common-tags");
     const moment = require("moment-timezone");
-    function duration(ms) {
+    
 
     const sec = Math.floor((ms / 1000) % 60).toString();
 
