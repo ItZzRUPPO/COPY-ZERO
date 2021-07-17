@@ -480,9 +480,9 @@ client.on('message',async message => {
 
   })
     
-const { MessageEmbed } = require("discord.js");
 
-module.exports = {
+
+
 
   name: "respect",
 
