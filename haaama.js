@@ -5,8 +5,8 @@ const { Prefix, Token, Color } = require("./config.js");
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 client.db = require("quick.db");
-client.login('HaaaMa / Token');
-const prefix = "1";
+client.login('ODY0Mjk3OTYzNzg5NDg0MDQz.YOzaNA.oQ8aiHxZPFCLdeCctGrldDWI4ZI');
+const prefix = "-";
 
 /// Token Prefix danewa ⬆️ 
 
