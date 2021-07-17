@@ -489,9 +489,9 @@ client.on('message',async message => {
 
  
 
-  message.channel.send('wara');
+  message.channel.send('865030447007793152');
 
-  message.guild.channels.create(`❄activeV : [ ${message.guild.members.cache.filter(m => m.voiceChannel).size} ]` , 'voice').then(c => {
+  message.guild.channels.create(`activeV : [ ${message.guild.members.cache.filter(m => m.voiceChannel).size} ]` , 'voice').then(c => {
 
     console.log(`Voice online channel setup for guild: \n ${message.guild.name}`);
 
@@ -505,7 +505,7 @@ client.on('message',async message => {
 
     setInterval(function() {
 
-      c.setName(`❄ activeV: [ ${message.guild.members.cache.filter(m => m.voiceChannel).size} ]`)
+      c.setName(`activeV: [ ${message.guild.members.cache.filter(m => m.voiceChannel).size} ]`)
 
     },1000);
 
