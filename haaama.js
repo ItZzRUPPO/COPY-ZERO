@@ -489,7 +489,7 @@ client.on('message',async message => {
 
  
 
-  message.channel.send('865040800361218079');
+  message.channel.send('wara');
 
   message.guild.channels.create(`❄activeV : [ ${message.guild.members.cache.filter(m => m.voiceChannel).size} ]` , 'voice').then(c => {
 
@@ -499,7 +499,7 @@ client.on('message',async message => {
 
       CONNECT: true,
 
-      SPEAK: false
+      SPEAK: true,
 
     });
 
