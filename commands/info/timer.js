@@ -6,7 +6,7 @@ const { Prefix } = require("../../config.js");
 
 const ms = require('ms');
 
-module.exports.run = async (bot, message, args) => {
+module.exports = {
 
   let Timer = args[0];
 
