@@ -13,7 +13,7 @@ module.exports = {
     
     let embed = new MessageEmbed()
     .setColor("RANDOM")
-    .setTitle(`Help ZERO!`)
+    .setTitle(`HELP ZERO!`)
 
     .setDescription(`
  
@@ -35,12 +35,12 @@ module.exports = {
 \`ascii\`, \`iq\`, \`rps\`,
 \`howgay\`, \`rate\`
 
-<a:gifland_tatlisbeyaz:864551590354223104> ︙**Gifs**
+<a:run:866009756124446780> ︙**Gifs**
 \`boy\`, \`girl\`, \`anime\`,
 \`smoke\`, \`baby\`, \`love\`,
 \`neon\`
 
-<a:gifland_kedicikbeyaz:792364864089358346> ︙**Photos** 
+<a:hi:866009710800928788> ︙**Photos** 
 \`Pboy\`, \`Pgirl\`, \`Panime\`,
 \`Pcartoon\`, \`Pbaby\`, \`Plove\`,
 \`Psmoke\`
