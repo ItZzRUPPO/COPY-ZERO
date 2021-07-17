@@ -480,149 +480,116 @@ client.on('message',async message => {
 
   })
 
-const usersMap = new Map();
+const { stripIndents } = require("common-tags");
 
-const LIMIT = 2;
+const moment = require("moment-timezone");
 
-const TIME = 10;
+ function duration(ms) {
 
-const DIFF = 10;
+    const sec = Math.floor((ms / 1000) % 60).toString();
+
+    const min = Math.floor((ms / (1000 * 60)) % 60).toString();
+
+    const hrs = Math.floor((ms / (1000 * 60 * 60)) % 60).toString();
+
+    const days = Math.floor((ms / (1000 * 60 * 60 * 24)) % 60).toString();
+
+    return `${days.padStart(1, "0")}-${hrs.padStart(2, "0")}-${min.padStart(
+
+      2,
+
+      "0"
+
+    )}-${sec.padStart(2, "0")}`;
+
+  }
+
+module.exports = {
+
+  name: "botinfo",
+
+  aliases: [],
+
+  description: "Pong!",
+
+  usage: "Ping",
+
+  run: async (client, message, args) => {
+
+const created = moment(client.user.createdAt).format("YYYY-MM-DD");
+
+     
+
+       let embed = new Discord.MessageEmbed()
+
+        .setTitle(`Info ${client.user.username}`)
+
+        .setColor("f1c40f")
+
+        .setThumbnail(client.user.displayAvatarURL())
+
+        .addField(`**My Name:**`,`${client.user.tag}`)
+
+        .addField(`**My ID**`,`${client.user.id}`)
+
+        .addField(`**My Prefix**`,`k?`)
+
+        .addField(`**Libary**`,`discord.js`)
+
+        .addField(`**Discord.js Version**`,`${Discord.version}`)
+
+        .addField(`**Created At:**`,`[**${created}**]`)
+
+        .addField(`**Ping**`,`${Math.round(client.ws.ping)}ms`)
+
+        .addField(`**Guilds**`,`${client.guilds.cache.size}`)
+
+        .addField(`**Channels**`,`${client.channels.cache.size}`)
+
+        .addField(`**Users**`,`${client.users.cache.size}`)
+
+        .addField(`**Creator**`,`[<@856199357396156436>]`)
+
+        .setFooter(`Requested By ${message.author.username}`)
+
+        .setTimestamp();
+
+       
+
+        message.channel.send(embed);
+
+}
+
+}
+
+
+        
+
+            
+                    
+                        
+ 
+                    
+
+
+
+
+
+
+
+
 
  
 
-client.on('message', async(message) => {
 
-    if (message.author.bot) return;
 
-    if (usersMap.has(message.author.id)) {
 
-        const userData = usersMap.get(message.author.id);
 
-        const { lastMessage, timer } = userData;
 
-        const difference = message.createdTimestamp - lastMessage.createdTimestamp;
 
-        let msgCount = userData.msgCount;
 
-        console.log(difference);
 
- 
 
-        if (difference > DIFF) {
-
-            clearTimeout(timer);
-
-            console.log('Cleared Timeout');
-
-            userData.msgCount = 1;
-
-            userData.lastMessage = message;
-
-            userData.timer = setTimeout(() => {
-
-                usersMap.delete(message.author.id);
-
-                console.log('Removed from map.')
-
-            }, TIME);
-
-            usersMap.set(message.author.id, userData)
-
-        } else {
-
-            ++msgCount;
-
-            if (parseInt(msgCount) === LIMIT) {
-
-                let muterole = message.guild.roles.cache.find(role => role.name === 'ncr-Muted');
-
-                if (!muterole) {
-
-                    try {
-
-                        message.guild.roles.create({
-
-                            data: {
-
-                                name: "ncr-Muted",
-
-                            }
-
-                        }).then(async(role) => {
-
-                            await message.guild.channels.cache.forEach(channel => {
-
-                                channel.overwritePermissions([{
-
-                                    id: role.id,
-
-                                    deny: ["SEND_MESSAGES"]
-
-                                }]);
-
-                            })
-
-                        })
-
-                    } catch (e) {
-
-                        console.log(e)
-
-                    }
-
-                }
-
-                message.member.roles.add(muterole);
-
-                message.reply('Has Been Muted For Spaming!.').then((m) => {
-
-                    setTimeout(() => {
-
-                        m.delete()
-
-                    }, 5000);
-
-                })
-
-                setTimeout(() => {
-
-                    message.member.roles.remove(muterole);
-
-                }, TIME);
-
-            } else {
-
-                userData.msgCount = msgCount;
-
-                usersMap.set(message.author.id, userData);
-
-            }
-
-        }
-
-    } else {
-
-        let fn = setTimeout(() => {
-
-            usersMap.delete(message.author.id);
-
-            console.log('Removed from map.')
-
-        }, TIME);
-
-        usersMap.set(message.author.id, {
-
-            msgCount: 1,
-
-            lastMessage: message,
-
-            timer: fn
-
-        });
-
-    }
-
-})
 
 
 
