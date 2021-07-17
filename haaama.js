@@ -481,31 +481,6 @@ client.on('message',async message => {
   })
     
 
-client.on('message',async message => {
-
- 
-
-  if(message.content.startsWith(prefix + "active")) {
-
- 
-
-  message.channel.send('865040800361218079');
-
-  message.guild.channels.create(`activeV : [ ${message.guild.members.cache.filter(m => m.voiceChannel).size} ]` , 'voice').then(c => {
-
-    console.log(`Voice online channel setup for guild: \n ${message.guild.name}`);
-
-    c.overwritePermissions(message.guild.id, {
-
-      CONNECT: true,
-
-      SPEAK: true,
-
-    });
-
-    setInterval(function() {
-
-      c.setName(`activeV: [ ${message.guild.members.cache.filter(m => m.voiceChannel).size} ]`)
 
     },1000);
 
