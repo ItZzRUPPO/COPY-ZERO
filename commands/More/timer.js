@@ -14,7 +14,7 @@ let Timer = args[0];
 
   }
 
-  message.channel.send(":white_check_mark: " + "<a:emoji_200:865930365306667029>""`| Timer Started for  " + `${ms(ms(Timer), {long: true})}`)
+  message.channel.send(":white_check_mark: " + "<a:emoji_200:865930365306667029>""`| Timer Started For  " + `${ms(ms(Timer), {long: true})}`)
 
   setTimeout(function(){
 
