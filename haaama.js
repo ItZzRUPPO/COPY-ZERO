@@ -330,8 +330,20 @@ client.on("message", message => {
     });
   }
 });
+const badword = ["quz", "dakt","kerm","quzi","xushkt"];// baddle xow wsha bxara am kawanaya
 
+ client.on('message',async message => {
 
+if (badword.some(d => message.content.toLowerCase().includes(d))) {
+
+message.delete();
+
+message.reply(`Speak Respect Fucker`);
+
+const smsm = message.member;
+
+smsm.roles.add('Muted');
+}})
 
 
 
