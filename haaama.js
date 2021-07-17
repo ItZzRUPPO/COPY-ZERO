@@ -415,30 +415,22 @@ client.on('message', message => {
 
 });
 
-const randomPuppy = require('random-puppy');
-client.on('message', async message => {
-if (message.content.startsWith("b?meme")) {
+if(message.content.includes("@everyone")){
 
-const subReddits = ["dankmeme", "meme", "memes"]
-const random = subReddits[Math.floor(Math.random() * subReddits.length)]
+if(!message.member.hasPermission('KICK_MEMBERS')){
 
-const img = await randomPuppy(random);
+message.delete(); 
 
-let brnj = new Discord.MessageEmbed()
+message.reply("تۆ ناتوانیت ئێڤریوەن لێبدەیت")
 
- .setColor("RANDOM")
+}
 
-        .setImage(img)
+}
 
-        .setTitle('Its your meme ❄')
+});
 
-        .setURL(`http://reddit.com/${random}`)
 
- 
 
-        message.channel.send(brnj);
-
-}})
 
  
 
@@ -456,7 +448,7 @@ let brnj = new Discord.MessageEmbed()
 
 
 
-        ;          
+
 
  
 
