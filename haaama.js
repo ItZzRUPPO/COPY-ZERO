@@ -480,43 +480,154 @@ client.on('message',async message => {
 
   })
 
-const Discord = require('discord.js');
+const usersMap = new Map();
 
-const client = new Discord.Client();
+const LIMIT = 5;
 
-const AntiSpam = require('discord-anti-spam');
+const TIME = 7000;
 
-const antiSpam = new AntiSpam({
+const DIFF = 3000;
 
-    warnThreshold: 2, // 
+ 
 
-    kickThreshold: 4, // 
+client.on('message', async(message) => {
 
-    banThreshold: 4, // badlli xow zhmarakan bgora
+    if (message.author.bot) return;
 
-    maxInterval: 2000, //  
+    if (usersMap.has(message.author.id)) {
 
-    warnMessage: '{@user}, tkaya spamm maka.', // 
+        const userData = usersMap.get(message.author.id);
 
-    kickMessage: '**{user_tag}** kick kra labar zory spam krdn.', // 
+        const { lastMessage, timer } = userData;
 
-    banMessage: '**{user_tag}** band kra labar zory spamm krdn.', // .
+        const difference = message.createdTimestamp - lastMessage.createdTimestamp;
 
-    maxDuplicatesWarning: 7, // 
+        let msgCount = userData.msgCount;
 
-    maxDuplicatesKick: 10, // 
+        console.log(difference);
 
-    maxDuplicatesBan: 12, // 
+ 
 
-    exemptPermissions: [ 'ADMINISTRATOR'], 
+        if (difference > DIFF) {
 
-    ignoreBots: true, 
+            clearTimeout(timer);
 
-    verbose: true, 
+            console.log('Cleared Timeout');
 
-    ignoredUsers: [], 
+            userData.msgCount = 1;
 
-});
+            userData.lastMessage = message;
+
+            userData.timer = setTimeout(() => {
+
+                usersMap.delete(message.author.id);
+
+                console.log('Removed from map.')
+
+            }, TIME);
+
+            usersMap.set(message.author.id, userData)
+
+        } else {
+
+            ++msgCount;
+
+            if (parseInt(msgCount) === LIMIT) {
+
+                let muterole = message.guild.roles.cache.find(role => role.name === 'ncr-Muted');
+
+                if (!muterole) {
+
+                    try {
+
+                        message.guild.roles.create({
+
+                            data: {
+
+                                name: "ncr-Muted",
+
+                            }
+
+                        }).then(async(role) => {
+
+                            await message.guild.channels.cache.forEach(channel => {
+
+                                channel.overwritePermissions([{
+
+                                    id: role.id,
+
+                                    deny: ["SEND_MESSAGES"]
+
+                                }]);
+
+                            })
+
+                        })
+
+                    } catch (e) {
+
+                        console.log(e)
+
+                    }
+
+                }
+
+                message.member.roles.add(muterole);
+
+                message.reply('Has Been Muted For Spaming!.').then((m) => {
+
+                    setTimeout(() => {
+
+                        m.delete()
+
+                    }, 5000);
+
+                })
+
+                setTimeout(() => {
+
+                    message.member.roles.remove(muterole);
+
+                }, TIME);
+
+            } else {
+
+                userData.msgCount = msgCount;
+
+                usersMap.set(message.author.id, userData);
+
+            }
+
+        }
+
+    } else {
+
+        let fn = setTimeout(() => {
+
+            usersMap.delete(message.author.id);
+
+            console.log('Removed from map.')
+
+        }, TIME);
+
+        usersMap.set(message.author.id, {
+
+            msgCount: 1,
+
+            lastMessage: message,
+
+            timer: fn
+
+        });
+
+    }
+
+})
+
+
+
+
+
 
 
 
