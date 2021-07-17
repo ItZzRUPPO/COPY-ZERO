@@ -482,7 +482,7 @@ client.on('message',async message => {
     function duration(ms) {
     const { stripIndents } = require("common-tags");
     const moment = require("moment-timezone");
-    
+    const Discord = require("discord.js");
 
     const sec = Math.floor((ms / 1000) % 60).toString();
 
