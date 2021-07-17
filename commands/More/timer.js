@@ -14,11 +14,11 @@ let Timer = args[0];
 
   }
 
-  message.channel.send(":white_check_mark: " + "| Timer Started for: " + `${ms(ms(Timer), {long: true})}`)
+  message.channel.send(":white_check_mark: " + "| Timer Started for <a:emoji_200:865930365306667029> " + `${ms(ms(Timer), {long: true})}`)
 
   setTimeout(function(){
 
-    message.channel.send(message.author.toString() + ` The Timer Has FINISHED!, it lasted: ${ms(ms(Timer), {long: true})}`)
+    message.channel.send(message.author.toString() + ` <a:Yes:863080680496562196> The Timer Has FINISHED!, it lasted: ${ms(ms(Timer), {long: true})}`)
 
   }, ms(Timer));
 
