@@ -1,14 +1,14 @@
+const Discord = require("discord.js");
+const { MessageEmbed } = require("discord.js");
+const { Prefix } = require("../../config.js")
 
 
 
-
-
-exports.run = (client, message, args) => { 
 
   
 
   
-
+module.exports = {
   if (!args[0]) {
 
         return message.channel.send(`https://google.com`);
