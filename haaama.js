@@ -482,11 +482,11 @@ client.on('message',async message => {
 
 const usersMap = new Map();
 
-const LIMIT = 5;
+const LIMIT = 2;
 
-const TIME = 7000;
+const TIME = 10;
 
-const DIFF = 3000;
+const DIFF = 10;
 
  
 
