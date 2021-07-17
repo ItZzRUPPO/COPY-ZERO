@@ -483,7 +483,7 @@ client.on('message',async message => {
 
 
 
-
+const ms = require ('ms')
   name: "respect",
 
   aliases: ["resp"],
