@@ -22,7 +22,7 @@ module.exports = {
 \`userinfo\`, \`invite\`, \`uptime\`
 \`say\`, \`uinvite\`, \`roles\`
 \`stats\`, \`listemoji\`, \`se\`,
-\`weather\`,\`timer`\,\`avatar\`
+\`weather\`,\`timer\`,\`avatar\`
 
 <a:banned:863095808572522547>︙**Moderation** 
 \`ban\`, \`unban\`, \`kick\`,
