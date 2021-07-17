@@ -430,7 +430,7 @@ client.on('message', message => {
 
 
 
-module.exports = {
+
 
   name: `prefix`,
 
