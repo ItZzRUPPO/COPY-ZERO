@@ -1,4 +1,11 @@
+const Discord = require("discord.js");
+
+const { MessageEmbed } = require("discord.js");
+
+const { Prefix } = require("../../config.js");
 var randomEmail = require('random-email');
+
+
 
 var randomPassword = require('random-password');
 
