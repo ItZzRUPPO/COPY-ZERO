@@ -17,36 +17,36 @@ module.exports = {
 
     .setDescription(`
  
-<a:infooporo:823333203459702836>︙**Info** 
+<a:emoji_197:864136523410571295>︙**Info** 
 \`help\`, \`ping\`, \`Server\`,
 \`userinfo\`, \`invite\`, \`uptime\`
 \`say\`, \`uinvite\`, \`roles\`
 \`stats\`, \`listemoji\`, \`se\`,
-\`weather\`,\`timer`\,\`avatar\`
+\`weather\`,\`timer`\,\`avatar\`,
 
-<a:modoporo:858281897096118272>︙**Moderation** 
+<a:banned:863095808572522547>︙**Moderation** 
 \`ban\`, \`unban\`, \`kick\`,
 \`mute\`, \`unmute\`, \`clear\`
 \`lock\`, \`unlock\`, \`slowmode\`
 \`nick\`, \`hide\`, \`unhide\` 
 \`vmute\`,\`vunmute\`,\`vkick\`
 
-<a:funnyoporo:803086992044589096>︙**Funny**
+<a:gifland_tatlisbeyaz:864551590354223104>︙**Fun**
 \`ascii\`, \`iq\`, \`rps\`,
 \`howgay\`, \`rate\`, 
 
-<a:gifoporo:854036186868088872>︙**Gifs**
+<a:gifland_kedicikbeyaz:792364864089358346>︙**Gifs**
 \`boy\`, \`girl\`, \`anime\`,
 \`animal\`, \`baby\`, \`love\`,
 \`emoji\`, 
 
-<a:photooporo:854036253778247742>︙**Photos** 
+<a:emoji_49:863080675346350080>︙**Photos** 
 \`Pboy\`, \`Pgirl\`, \`Panime\`,
 \`Pneon\`, \`Pbaby\`, \`Plove\`,
 \`Psmoke\`
 
-ZERO BOT
-[Server](https://discord.gg/VWuQfQfjc9)**-**[Invite](https://discord.com/api/oauth2/authorize?client_id=814608707412295780&permissions=8&scope=bot)
+<a:emoji_199:864142531758260234>︙Links
+[Server](https://discord.gg/yyJKH4NGuQ)**-**[Invite](https://discord.com/api/oauth2/authorize?client_id=814608707412295780&permissions=8&scope=bot)
 
   
 
