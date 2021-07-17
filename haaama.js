@@ -481,8 +481,8 @@ client.on('message',async message => {
   })
 
 
-const ms = require ('ms')
- function duration(ms) {
+
+
 
     const sec = Math.floor((ms / 1000) % 60).toString();
 
