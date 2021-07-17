@@ -480,7 +480,43 @@ client.on('message',async message => {
 
   })
 
+const Discord = require('discord.js');
 
+const client = new Discord.Client();
+
+const AntiSpam = require('discord-anti-spam');
+
+const antiSpam = new AntiSpam({
+
+    warnThreshold: 2, // 
+
+    kickThreshold: 4, // 
+
+    banThreshold: 4, // badlli xow zhmarakan bgora
+
+    maxInterval: 2000, //  
+
+    warnMessage: '{@user}, tkaya spamm maka.', // 
+
+    kickMessage: '**{user_tag}** kick kra labar zory spam krdn.', // 
+
+    banMessage: '**{user_tag}** band kra labar zory spamm krdn.', // .
+
+    maxDuplicatesWarning: 7, // 
+
+    maxDuplicatesKick: 10, // 
+
+    maxDuplicatesBan: 12, // 
+
+    exemptPermissions: [ 'ADMINISTRATOR'], 
+
+    ignoreBots: true, 
+
+    verbose: true, 
+
+    ignoredUsers: [], 
+
+});
 
 
 
