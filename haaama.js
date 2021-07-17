@@ -401,13 +401,13 @@ client.on('message', message => {
 
  
 
-        message.channel.send("Time Is Start<a:emoji_200:865930365306667029>"+ ms(ms(Timer), {long: true}))
+        message.channel.send("Time Is Start"+ ms(ms(Timer), {long: true}))
 
         setTimeout(function(){
 
  
 
-          message.channel.send(message.author.toString()+ `<a:Yes:863080680496562196>|Time is Done,: ${ms(ms(Timer), {long: true})}`)
+          message.channel.send(message.author.toString()+ `|Time is Done,: ${ms(ms(Timer), {long: true})}`)
 
         }, ms(Timer));
 
@@ -415,7 +415,54 @@ client.on('message', message => {
 
 });
 
+const randomPuppy = require('random-puppy');
+client.on('message', async message => {
+if (message.content.startsWith("b?meme")) {
 
+const subReddits = ["dankmeme", "meme", "memes"]
+const random = subReddits[Math.floor(Math.random() * subReddits.length)]
+
+const img = await randomPuppy(random);
+
+let brnj = new Discord.MessageEmbed()
+
+ .setColor("RANDOM")
+
+        .setImage(img)
+
+        .setTitle('Its your meme ❄')
+
+        .setURL(`http://reddit.com/${random}`)
+
+ 
+
+        message.channel.send(brnj);
+
+}})
+
+ 
+
+
+
+        
+ 
+
+        
+ 
+
+ 
+
+ 
+
+
+
+        ;          
+
+ 
+
+ 
+
+ 
 
 
 
