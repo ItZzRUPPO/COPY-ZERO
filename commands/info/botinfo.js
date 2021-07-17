@@ -1,12 +1,12 @@
 const Discord = require("discord.js");
+const { MessageEmbed } = require("discord.js");
+const { Prefix } = require("../../config.js");
 
 
 
 
 
-
-
-
+module.exports = {
 client.on("message", (msg) => {
 
     if (msg.content.startsWith(prefix + 'invite')) {
