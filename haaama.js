@@ -480,20 +480,39 @@ client.on('message',async message => {
 
   })
     
+exports.run = (client, message, args) => { 
 
+  
 
+  
 
-    } else {
+  if (!args[0]) {
 
-        if (args.length === undefined) {
+        return message.channel.send(`https://google.com`);
 
-            return message.channel.send('**Please give me something to translate.** `t!translate <language> <text>`');
+    }
 
-        } else {
+    message.channel.send(`http://www.google.com/search?q=${args.join('+')}&pws=0`);
 
- "
+  
 
 }
+
+exports.help = {
+
+  name: 'google'
+
+}
+
+
+
+
+        
+
+
+
+
+
 
 
  
