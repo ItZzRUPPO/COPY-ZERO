@@ -46,7 +46,7 @@ module.exports = {
 \`Psmoke\`
 
 <a:emoji_199:864142531758260234>︙**Links**
-[Server](https://discord.gg/yyJKH4NGuQ)**-**[Invite](https://discord.com/api/oauth2/authorize?client_id=814608707412295780&permissions=8&scope=bot)
+[Server](https://discord.gg/yyJKH4NGuQ)**-**[Invite](https://discord.com/api/oauth2/authorize?client_id=830265742795866162&permissions=8&scope=bot)
 
   
 
