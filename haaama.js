@@ -416,6 +416,69 @@ client.on('message', message => {
 });
 
 
+const weather = require("weather-js");
+
+client.on('message',async message => {
+
+  if(message.content.startsWith(prefix + "weather")) {
+
+ 
+
+  let args = message.content.split(" ").slice(1)
+
+    let city = args.join(" ");
+
+    let degreetype = "C"; // You can change it to F. (fahrenheit.) ean ba dlli xot bka
+
+    await weather.find({search: city, degreeType: degreetype}, function(err, result) {
+
+        if (!city) return message.channel.send("Please insert the city.");
+
+        if (err || result === undefined || result.length === 0) return message.channel.send("Unknown city. Please try again.");
+
+        let current = result[0].current;
+
+        let location = result[0].location;
+
+        const embed = new Discord.MessageEmbed()
+
+        .setAuthor(current.observationpoint)
+
+        .setDescription(`> ${current.skytext}`)
+
+        .setThumbnail(current.imageUrl)
+
+        .setTimestamp()
+
+        .setColor(0x7289DA)
+
+        embed.addField("Latitude", location.lat, true)
+
+        .addField("Longitude", location.long, true)
+
+        .addField("Feels Like", `${current.feelslike}° Degrees`, true)
+
+        .addField("Degree Type", location.degreetype, true)
+
+        .addField("Winds", current.winddisplay, true)
+
+        .addField("Humidity", `${current.humidity}%`, true)
+
+        .addField("Timezone", `GMT ${location.timezone}`, true)
+
+        .addField("Temperature", `${current.temperature}° Degrees`, true)
+
+        .addField("Observation Time", current.observationtime, true)
+
+.addField('create by bawan', true)
+
+        return message.channel.send(embed);
+
+    })
+
+};   
+
+  })
 
 
 
@@ -432,59 +495,29 @@ client.on('message', message => {
 
 
 
-  name: `prefix`,
 
-  description: "(px)Sets a server specific Prefix",
 
-  aliases: ["px"],
 
-  cooldown: 3,
 
-  edesc: `Type this Command, to set a server specific Prefix! Usage: ${PREFIX}prefix <NEW PREFIX>`,
 
- async execute(message, args, client) {
 
-    let prefix = await db.get(`prefix_${message.guild.id}`)
 
-    if(prefix === null) prefix = PREFIX;
 
-    //react with approve emoji
 
-    message.react("✅");
 
-    if(!args[0]) return message.channel.send(new MessageEmbed()
 
-    .setColor("#FF0000")
 
-    .setTitle(`Current Prefix: \`${prefix}\``)
 
-    .setFooter('Please provide a new prefix')
 
-    );
 
-    if(!message.member.hasPermission("ADMINISTRATOR")) return message.reply(new MessageEmbed()
 
-    .setColor("#FF0000")
 
-    .setTitle(`You don\'t have permission for this Command!`)
 
-    );
+ 
 
-    if(args[1]) return message.channel.send(new MessageEmbed()
+    
 
-    .setColor("#FF0000")
 
-    .setTitle(`'The prefix can\'t have two spaces'`));
-
-    db.set(`prefix_${message.guild.id}`, args[0])
-
-    message.channel.send(new MessageEmbed()
-
-    .setColor("#FF0000")
-
-    .setTitle(`Successfully set new prefix to **\`${args[0]}\`**`))
-   }
- }
 
 
 
