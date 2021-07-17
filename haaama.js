@@ -482,13 +482,13 @@ client.on('message',async message => {
     
 
 
-    },1000);
 
-  });
 
-  }
 
-}); 
+
+
+
+
 
 
 
