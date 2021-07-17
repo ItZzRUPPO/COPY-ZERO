@@ -1,5 +1,5 @@
-const Discord = module.require('haaama.js');
-
+const Discord = module.require('discord.js');
+const { Prefix } = require("../../config.js");
 const ms = require('ms');
 
 module.exports.run = async (bot, message, args) => {
