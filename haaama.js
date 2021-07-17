@@ -428,7 +428,7 @@ client.on('message', message => {
 
 
 
-const db = require('quick.db');
+
 
 module.exports = {
 
