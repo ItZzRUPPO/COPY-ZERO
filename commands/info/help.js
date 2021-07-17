@@ -22,7 +22,7 @@ module.exports = {
 \`userinfo\`, \`invite\`, \`uptime\`
 \`say\`, \`uinvite\`, \`roles\`
 \`stats\`, \`listemoji\`, \`se\`,
-\`weather\`,\`timer`\,\`avatar\`,
+\`weather\`,\`timer`\,\`avatar\`
 
 <a:banned:863095808572522547>︙**Moderation** 
 \`ban\`, \`unban\`, \`kick\`,
@@ -33,12 +33,12 @@ module.exports = {
 
 <a:gifland_tatlisbeyaz:864551590354223104>︙**Fun**
 \`ascii\`, \`iq\`, \`rps\`,
-\`howgay\`, \`rate\`, 
+\`howgay\`, \`rate\`
 
 <a:gifland_kedicikbeyaz:792364864089358346>︙**Gifs**
 \`boy\`, \`girl\`, \`anime\`,
 \`smoke\`, \`baby\`, \`love\`,
-\`neon\`, 
+\`neon\`
 
 <a:emoji_49:863080675346350080>︙**Photos** 
 \`Pboy\`, \`Pgirl\`, \`Panime\`,
