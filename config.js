@@ -1,3 +1,3 @@
-exports.Prefix = `-`By SMSM;
-exports.Token = `SMSM / Token`;
+exports.Prefix = `-`;
+exports.Token = `By SMSM `;
 //// token dabe Bashi haaama.js dabne
