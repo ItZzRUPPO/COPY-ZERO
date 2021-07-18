@@ -542,9 +542,9 @@ ${msgs.size} messages cleared
 
 
 
-    }
+    
 
-})
+
 
 
 
