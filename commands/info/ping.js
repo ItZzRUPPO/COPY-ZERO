@@ -2,37 +2,37 @@ const Discord = require("discord.js");
 const { MessageEmbed } = require("discord.js");
 const { Prefix } = require("../../config.js");
 
+const Discord = require("discord.js");
 
-    var msg = `${Date.now() - ncr.createdTimestamp}`;
+const { MessageEmbed } = require("discord.js");
 
-    var api = `${Math.round(client.ws.ping)}`;
+const { Prefix } = require("../../config.js");
 
-    if (Number(msg) > 70) states = "🟢 Good";
+module.exports = {
 
-    if (Number(msg) > 170) states = "🟡 Not Bad";
+  name: "ping",
 
-    if (Number(msg) > 350) states = "🔴 Soo Bad";
+  aliases: ["p"],
 
-    if (Number(api) > 70) states2 = "🟢 Good";
+  description: "Pong!",
 
-    if (Number(api) > 170) states2 = "🟡 Not Bad";
+  usage: "Ping",
 
-    if (Number(api) > 350) states2 = "🔴 Soo Bad";
+  run: async (client, message, args) => {
 
-    if (ncr.author.bot) return;
+    
 
-    ncr.channel.send(
+    const embed = new MessageEmbed()
 
-      new MessageEmbed()
+      .setColor("WHITE")
 
-        .setColor("00e8ff")
+      .setDescription(`My Ping is - ${client.ws.ping}`)
 
-        .setAuthor(ncr.author.username, ncr.author.avatarURL())
+    message.channel.send(embed);
 
-        .addField("**Time Taken:**", msg + " ms 📶 | " + states, true)
+    
 
-        .addField("**WebSocket:**", api + " ms 📶 | " + states2, true)
+  }
 
-        .setTimestamp()
-
-        .setFooter(`Request By ${ncr.author.tag}`)
+};
+    
