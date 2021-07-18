@@ -6,7 +6,7 @@ const { Prefix } = require("../../config.js");
 
 
 
-const { Prefix } = require("../../config.js");
+
 
 module.exports = {
 
