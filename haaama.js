@@ -13,9 +13,10 @@ const prefix = "-";
 client.on("ready", async () => {
   console.log(`ready!`);
   client.user
-       .setActivity(`${Prefix}help | Users ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)},`, { type: "PLAYING"});
-       .setActivity(`HaaaMa`)
-    .catch(error => console.log(error));
+      client.setActivity(`Type: ${PREFIX}help - Music Is One`, { type: "PLAING"});
+       client.setActivity(`Type: GuIdis ${client.guilds.cache.size},Users ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)},`, { type: "PLAYING"});
+    }, (5000));
+  .catch(error => console.log(error));
 });
 
 client.on("message", async message => {
