@@ -3,8 +3,8 @@ const { MessageEmbed } = require("discord.js");
 const { Prefix } = require("../../config.js");
 
 module.exports = {
-  name: "animal",
-  aliases: ["Animal"],
+  name: "smoke",
+  aliases: ["sm"],
   description: "Show Gif",
   usage: "Gif",
   run: async (client, message, args) => {
