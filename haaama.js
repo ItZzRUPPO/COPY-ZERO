@@ -7,8 +7,8 @@ client.aliases = new Discord.Collection();
 client.db = require("quick.db");
 client.login('ODMwMjY1NzQyNzk1ODY2MTYy.YHELOg._kC58hOy5nfDPxPm-Zj04dEOfNQ');
 const prefix = "-";
+const { MessageEmbed } = require("discord.js");
 const ms = require("ms")
-
 
 client.on("ready", async () => {
   console.log(`ready!`);
