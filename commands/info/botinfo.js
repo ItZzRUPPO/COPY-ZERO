@@ -10,11 +10,6 @@ const ee = require("../../botconfig/embed.json");
 
 
 
-const {
-
-    duration
-
-} = require("../../handlers/functions")
 
 module.exports = {
 
