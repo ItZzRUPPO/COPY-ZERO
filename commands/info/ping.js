@@ -4,15 +4,15 @@ const { Prefix } = require("../../config.js");
 
 module.exports = {
   name: "ping",
-  aliases: ["pong"],
+  aliases: ["p"],
   description: "Pong!",
   usage: "Ping",
   run: async (client, message, args) => {
     
 
     const embed = new MessageEmbed()
-      .setColor("BLACK")
-      .setDescription(`Pong - ${client.ws.ping}`)
+      .setColor("WHITE")
+      .setDescription(`My Ping is - ${client.ws.ping}`)
 
     message.channel.send(embed);
 
