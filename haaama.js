@@ -13,9 +13,9 @@ const prefix = "-";
 client.on("ready", async () => {
   console.log(`ready!`);
   client.user
-      client.setActivity(`Type: ${PREFIX}help - Music Is One`, { type: "PLAING"});
-       client.setActivity(`Type: GuIdis ${client.guilds.cache.size},Users ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)},`, { type: "PLAYING"});
-    }, (5000));
+       .setActivity(`${Prefix}help | ${client.guilds.cache.size} Server,${client.guilds.cache.size},Users` { type: "PLAYING" })
+       .setActivity(`SMSM`)
+
   .catch(error => console.log(error));
 });
 
