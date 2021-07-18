@@ -8,7 +8,7 @@ client.db = require("quick.db");
 client.login('ODMwMjY1NzQyNzk1ODY2MTYy.YHELOg._kC58hOy5nfDPxPm-Zj04dEOfNQ');
 const prefix = "-";
 
-
+////////////////////////////////
 
 client.on("ready", async () => {
   console.log(`ready!`);
