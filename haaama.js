@@ -7,17 +7,7 @@ client.aliases = new Discord.Collection();
 client.db = require("quick.db");
 client.login('ODMwMjY1NzQyNzk1ODY2MTYy.YHELOg._kC58hOy5nfDPxPm-Zj04dEOfNQ');
 const prefix = "-";
-const { Client, Collection, MessageEmbed } = require(`discord.js`);
 
-const {
-
-  PREFIX,
-
-  approveemoji,
-
-  denyemoji
-
-} = require(`../config.json`)
 ////////////////////////////////
 
 client.on("ready", async () => {
