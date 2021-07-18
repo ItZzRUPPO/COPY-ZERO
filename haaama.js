@@ -541,23 +541,11 @@ ${msgs.size} messages cleared
 });
 
 
-client.on("", niro => {
 
 
-      if(niro.member.hasPermission('ADMINISTRATOR')) return;
 
-    console.log("Share links" + niro.content + " from " + `${niro.author.tag}` + "successful deleted")
 
-      niro.delete();
 
-    niro.channel.send("**No i delete your message you can not share links here , " + `<@${niro.author.id}>**`)
-
-  }
- your message , you can not share links here , " + `<@${niro.author.id}>**`)
-
- }
-
-}
 
 
 
