@@ -1,3 +1,5 @@
+const Discord = require("discord.js");
+const { MessageEmbed } = require("discord.js");
 client.on("message", async message => {
 
     let command = message.content.toLowerCase().split(" ")[0];
