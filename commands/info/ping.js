@@ -2,15 +2,6 @@ const Discord = require("discord.js");
 const { MessageEmbed } = require("discord.js");
 const { Prefix } = require("../../config.js");
 
-client.on("message", async ncr => {
-
-    if (ncr.content.startsWith(prefix + "ping")) {
-
-    var states = "🟢 Excellent";
-
-    var states2 = "🟢 Excellent";
-
-    var ncr = message;
 
     var msg = `${Date.now() - ncr.createdTimestamp}`;
 
