@@ -8,7 +8,7 @@ const config = require("../../botconfig/config.json");
 
 const ee = require("../../botconfig/embed.json");
 
-const emoji = require(`../../botconfig/emojis.json`);
+
 
 const {
 
