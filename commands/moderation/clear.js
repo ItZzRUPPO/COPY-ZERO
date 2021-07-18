@@ -6,7 +6,7 @@ client.on("message", async message => {
 
     command = command.slice(prefix.length);
 
-    if (command == "clear" || command == "مسح") {
+    if (command == "clear" || command == "cr") {
 
         message.delete({ timeout: 0 })
 
