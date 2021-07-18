@@ -3,8 +3,8 @@ const { MessageEmbed } = require("discord.js");
 const { Prefix } = require("../../config.js");
 
 module.exports = {
-  name: "piccouple",
-  aliases: ["pcouple", "Pcouple"],
+  name: "plove",
+  aliases: ["plv", "piclove"],
   description: "Show Photo",
   usage: "Photo",
   run: async (client, message, args) => {
