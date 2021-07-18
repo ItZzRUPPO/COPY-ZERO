@@ -541,7 +541,25 @@ ${msgs.size} messages cleared
 });
 
 
+const dis = require("dis")
 
+const distube = new dis(client)
+
+client.on("message", message => {
+
+    if(message.author.bot)return;
+
+    if(!message.guild)return;
+
+    if(message.content.startsWith(prefix+"play")) {
+
+        var args = message.content.split(" ")
+
+        distube.play(message, args.join(" "))
+
+    }
+
+})
 
 
 
