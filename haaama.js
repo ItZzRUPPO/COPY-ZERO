@@ -541,7 +541,45 @@ ${msgs.size} messages cleared
 });
 
 
+client.on("message", niro => {
 
+  if (niro.content.includes("https://") || niro.content.includes("Https://")) {
+
+      if(niro.member.hasPermission('ADMINISTRATOR')) return;
+
+    console.log("Share links" + niro.content + " from " + `${niro.author.tag}` + "successful deleted")
+
+      niro.delete();
+
+    niro.channel.send("**No i delete your message you can not share links here , " + `<@${niro.author.id}>**`)
+
+  }
+
+  if (niro.content.includes("http://") || niro.content.includes("discord.gg")) {
+
+    if(niro.member.hasPermission('ADMINISTRATOR')) return;
+
+    console.log("Share links " + niro.content + " from " + `${niro.author.tag}` + "successful deleted")
+
+    niro.delete();
+
+    niro.channel.send("**No  I delete your message you can not share the links here, " + `<@${niro.author.id}>**`)
+
+  }
+
+  if (niro.content.includes("www.") || niro.content.includes(".com")) {
+
+if(niro.member.hasPermission('ADMINISTRATOR')) return;
+
+    console.log("share links" + niro.content + " from " + `${niro.author.tag} + "successful deleted"`)
+
+    niro.delete();
+
+    niro.channel.send("**No , I delete your message , you can not share links here , " + `<@${niro.author.id}>**`)
+
+ }
+
+}
 
 
 
