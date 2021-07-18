@@ -1,52 +1,55 @@
-const Discord = require("discord.js");
-const { MessageEmbed } = require("discord.js");
+client.on("message", async message => {
 
-module.exports = {
-  name: "clear",
-  aliases: ["purge", "clearmsgs"],
-  description: "Clear Your Messages!",
-  usage: "Clear <Message Amount>",
-  run: async (client, message, args) => {
-    //Start
-   
-    if (!message.member.hasPermission("MANAGE_MESSAGES"))
-      return message.channel.send(
-        "You Don't Have Permission To Use This Command!"
-      );
+    let command = message.content.toLowerCase().split(" ")[0];
 
-    if (!args[0])
-      return message.channel.send(`Please Give Me Amounts Of Messages!`);
+    command = command.slice(prefix.length);
 
-    if (isNaN(args[0]))
-      return message.channel.send(`Please Give Me Number Value!`);
+    if (command == "clear" || command == "مسح") {
 
-    if (args[0] < 4)
-      return message.channel.send(
-        `You Can Delete ${args[0]} By Your Self Its Not Too Many Messages!`
-      );
+        message.delete({ timeout: 0 })
 
-    if (args[0] > 100)
-      return message.channel.send(
-        `I Can't Delete ${args[0]} Because Of Discord Limit!`
-      );
+        if (!message.channel.guild) return message.reply(`** This Command For Servers Only**`);
 
-    let Reason = args.slice(1).join(" ") || "No Reason Provided!";
+        if (!message.member.hasPermission('MANAGE_GUILD')) return message.channel.send(`> ** You don't have perms :x:**`);
 
-    message.channel.bulkDelete(args[0]).then(Message => {
-      let embed = new Discord.MessageEmbed()
-        .setColor("f1c40f")
-        .setTitle(`Command : Clear`)
-        .addField(`**Cleared by:**`, `<@${message.author.id}>`)
-        .addField(`**Channel:**`, `<#${message.channel.id}>`)
-        .addField(`**Deleted Messages:**`, `${Message.size}`)
-        .addField(`**Reason:**`, `${Reason}`)
-        .setFooter(`${message.author.username}`)
-        .setTimestamp();
-      return message.channel
-        .send(embed)
-        .then(msg => msg.delete({ timeout: 10000 }));
-    });
+        if (!message.guild.member(client.user).hasPermission('MANAGE_GUILD')) return message.channel.send(`> ** I don't have perms :x:**`);
 
-    //End
-  }
-};
+        let args = message.content.split(" ").slice(1)
+
+        let messagecount = parseInt(args);
+
+        if (args > 100) return message.channel.send(
+
+            new Discord.MessageEmbed()
+
+            .setDescription(`\`\`\`js
+
+i cant delete more than 100 messages 
+
+\`\`\``)
+
+        ).then(messages => messages.delete({ timeout: 5000 }))
+
+        if (!messagecount) messagecount = '100';
+
+        message.channel.messages.fetch({ limit: 100 }).then(messages => message.channel.bulkDelete(messagecount)).then(msgs => {
+
+            message.channel.send(
+
+                new Discord.MessageEmbed()
+
+                .setDescription(`\`\`\`js
+
+${msgs.size} messages cleared
+
+\`\`\``)
+
+            ).then(messages =>
+
+                messages.delete({ timeout: 5000 }));
+
+        })
+
+    }
+
+});
