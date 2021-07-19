@@ -109,7 +109,7 @@ client.on("ready", () => {
 
 
 client.on("message", message => {
-  if (message.content.startsWith(prefix + "listem", "listemoji")) {
+  if (message.content.startsWith(prefix + "le", "listemoji")) {
     let Emojis = "";
     let EmojisAnimated = "";
     let EmojiCount = 0;
@@ -292,7 +292,7 @@ function timeCon(time) {
 ////
 
 client.on("message", message => {
-  if (message.content === prefix + "hide") {
+  if (message.content === prefix + "hide","h") {
     if (!message.channel.guild) return;
     if (!message.member.hasPermission("MANAGE_CHANNELS"))
       return message.reply("You Dont Have Perms `MANAGE CHANNELS` :x:");
@@ -312,7 +312,7 @@ client.on("message", message => {
   }
 });
 client.on("message", message => {
-  if (message.content === prefix + "unhide") {
+  if (message.content === prefix + "unhide","uh") {
     if (!message.channel.guild) return;
     if (!message.member.hasPermission("MANAGE_CHANNELS"))
       return message.reply("You dont have Perms `MANAGE CHANNELS`:x:");
@@ -636,7 +636,7 @@ client.on('message' , message => {
 
  
 
-    if (message.content === "-support") {
+    if (message.content === "-support","-sp") {
 
         if(!message.channel.guild) return message.reply('**this command only for server**');
 
@@ -661,7 +661,7 @@ client.on('message' , message => {
 
  client.on('message', message => {
 
-    if(message.content == '-members') {
+    if(message.content == '-members','am') {
 
     const embed = new Discord.MessageEmbed()
     .setColor("RANDOM")
