@@ -633,27 +633,12 @@ let devs = ["459047149942865920"];
 /////////////rooms code
 
 
-      .addField(
+      
 
-        "arrow_down Rooms Number. heavy_check_mark",
 
-        ** ${message.guild.channels.cache.size}**
 
-      )
 
-      .addField(
 
-        "arrow_downRooms  Name. ✔️:",
-
-        **[${channels}]**
-
-      );
-
-    message.channel.send(embed);
-
-  }
-
-});
 
  
 
