@@ -671,7 +671,7 @@ Link Support|https://discord.gg/yyJKH4NGuQ
     .setColor("RANDOM")
     .setDescription(`Server Members
 
-     All Members  ${message.guild.memberCount}`)
+  All Members  ${message.guild.memberCount}`)
              
      message.channel.send({embed});
 
