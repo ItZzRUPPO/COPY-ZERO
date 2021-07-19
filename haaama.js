@@ -687,11 +687,11 @@ All Members  ${message.guild.memberCount}`)
 
     if (message.member.voiceChannel) {
 
-      message.member.voiceChannel.join()
+      message.member.voiceChannel.join("861737765561696267")
 
         .then(connection => {
 
-          message.reply('kra. ..!');
+          message.reply('Done');
 
         })
 
@@ -699,7 +699,7 @@ All Members  ${message.guild.memberCount}`)
 
     } else {
 
-      message.reply('- bcho zhwrekawa !');
+      message.reply('Go To Voice');
 
     }
 
