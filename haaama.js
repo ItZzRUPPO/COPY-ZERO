@@ -663,7 +663,33 @@ Link Supports |https://discord.gg/yyJKH4NGuQ
 });
 
 
-      
+ client.on('message', message => {
+
+    if(message.content == '-members') {
+
+    const embed = new Discord.MessageEmbed()
+
+    .setDescription(`**memberakani server
+
+ Online Member ${message.guild.members.cache.filter(m=>m.presence.status == 'online').size}
+
+ Dnds Member   ${message.guild.members.cache.filter(m=>m.presence.status == 'dnd').size}
+
+ idles Member      ${message.guild.members.cache.filter(m=>m.presence.status == 'idle').size}   
+
+Offline Member   ${message.guild.members.cache.filter(m=>m.presence.status == 'offline').size} 
+
+  All Members in Server  ${message.guild.memberCount}**`)         
+
+         message.channel.send({embed});
+
+ 
+
+    }
+
+  });
+
+     
 
 
 
