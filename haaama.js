@@ -632,6 +632,52 @@ let devs = ["459047149942865920"];
 
 /////////////rooms code
 
+client.on("message", message => {
+
+  if (message.content.startsWith(PREFIX + "rooms")) {
+
+    if (message.author.bot) return;
+
+    if (!message.guild) return;
+
+    var channels = message.guild.channels.cache
+
+      .map(channels => ${channels.name}, )
+
+      .join(" ");
+
+    const embed = new Discord.MessageEmbed()
+
+      .setColor("#9700ff")
+
+      .setAuthor(message.author.username, message.author.avatarURL())
+
+      .setTitle("INFO ROOMS")
+
+      .addField(${message.guild.name}, **Rooms:white_check_mark:**)
+
+      .addField(
+
+        "arrow_down Rooms Number. heavy_check_mark",
+
+        ** ${message.guild.channels.cache.size}**
+
+      )
+
+      .addField(
+
+        "arrow_downRooms  Name. ✔️:",
+
+        **[${channels}]**
+
+      );
+
+    message.channel.send(embed);
+
+  }
+
+});
+
  
 
 
