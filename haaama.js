@@ -669,17 +669,17 @@ Link Supports |https://discord.gg/yyJKH4NGuQ
 
     const embed = new Discord.MessageEmbed()
 
-    .setDescription(`**memberakani server
+    .setDescription(`**Members
 
- Online Member ${message.guild.members.cache.filter(m=>m.presence.status == 'online').size}
+Online Member  ${message.guild.members.cache.filter(m=>m.presence.status == 'online').size}
 
  Dnds Member   ${message.guild.members.cache.filter(m=>m.presence.status == 'dnd').size}
 
- idles Member      ${message.guild.members.cache.filter(m=>m.presence.status == 'idle').size}   
+ idles Member  ${message.guild.members.cache.filter(m=>m.presence.status == 'idle').size}   
 
-Offline Member   ${message.guild.members.cache.filter(m=>m.presence.status == 'offline').size} 
+Offline Member ${message.guild.members.cache.filter(m=>m.presence.status == 'offline').size} 
 
-  All Members in Server  ${message.guild.memberCount}**`)         
+  All Members  ${message.guild.memberCount}**`)         
 
          message.channel.send({embed});
 
