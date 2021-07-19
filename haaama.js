@@ -542,6 +542,30 @@ ${msgs.size} messages cleared
 });
 /////////////////////////////////////////cody ban lagal unban 
 
+client.on('message', message => {
+
+  if (message.author.bot) return;
+
+  if (message.content.startsWith(prefix + 'id')) {
+
+    var user = message.guild.member (message.mentions.members.first() || message.author);
+
+      const embed = new Discord.MessageEmbed()
+
+  .setColor("RANDOM") 
+
+   .addField(`ID USER : [ ${user.id} ]`,`${user.user}`)
+
+   .setThumbnail(user.user.avatarURL())
+
+  .setFooter(`- Requested By: ${message.author.tag}`)
+
+  message.channel.send({embed});
+
+      }
+
+  });
+
 
 
 
