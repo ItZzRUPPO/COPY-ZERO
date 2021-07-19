@@ -668,10 +668,10 @@ Link Support|https://discord.gg/yyJKH4NGuQ
     if(message.content == '-members') {
 
     const embed = new Discord.MessageEmbed()
-
+    .setColor("RANDOM")
     .setDescription(`Server Members
 
-     All Members  ${message.guild.memberCount}**`)
+     All Members  ${message.guild.memberCount}`)
              
      message.channel.send({embed});
 
