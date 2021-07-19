@@ -13,8 +13,8 @@ const prefix = "-";
 client.on("ready", async () => {
   console.log(`ready!`);
   client.user
-       .setActivity(`${PREFIX}help | By SMSM`, { type: "PLAYING"})
-       .setActivity(`${PREFIX}help | Server ${client.guilds.cache.size},Users ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)},`, { type: "PLAYING"});
+       client.setActivity(`${PREFIX}help | Server ${client.guilds.cache.size},Users ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)},`, { type: "PLAYING"});
+       client.setActivity(`${PREFIX}help | By SMSM`, { type: "PLAYING"})
 
   .catch(error => console.log(error));
 });
