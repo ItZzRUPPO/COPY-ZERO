@@ -543,23 +543,6 @@ ${msgs.size} messages cleared
 /////////////////////////////////////////cody ban lagal unban 
 
 
-client.on("message", (message) => {
-
-    if (message.content.startsWith(prefix + "unban")) {
-
-        if (message.channel.type == "dm") return;
-
-        if (message.author.bot) return;
-
-        try {
-
-            if (!message.member.hasPermission('BAN_MEMBERS')) return message.channel.send(
-
-                new Discord.MessageEmbed()
-
-                .setColor("RED")
-
-                .setDescription("❌" + " **You Need `BAN_MEMBERS` Permission To Use This Command!**")
 
             );
 
