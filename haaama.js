@@ -543,6 +543,82 @@ ${msgs.size} messages cleared
 /////////////////////////////////////////cody ban lagal unban 
 
 
+client.on("message", (message) => {
+
+    if (message.content.startsWith(prefix + "unban")) {
+
+        if (message.channel.type == "dm") return;
+
+        if (message.author.bot) return;
+
+        try {
+
+            if (!message.member.hasPermission('BAN_MEMBERS')) return message.channel.send(
+
+                new Discord.MessageEmbed()
+
+                .setColor("RED")
+
+                .setDescription("❌" + " **You Need `BAN_MEMBERS` Permission To Use This Command!**")
+
+            );
+
+            message.guild.fetchBans().then(bans => {
+
+                if (bans.size == 0) {
+
+                    message.reply(
+
+                        new Discord.MessageEmbed()
+
+                        .setColor("RED")
+
+                        .setDescription(
+
+                            `**❌ | Thare Is No Bannded Members!**`
+
+                        )
+
+                    );
+
+                };
+
+                bans.forEach(ban => {
+
+                    message.guild.members.unban(ban.user.id);
+
+                    let una = bans.size;
+
+                    message.channel.send(
+
+                        new Discord.MessageEmbed()
+
+                        .setColor("GREEN")
+
+                        .setDescription(
+
+                            `**✅ | Done Unbaned ${una} Members!**`
+
+                        )
+
+                    )
+
+                });
+
+            })
+
+        } catch (e) {
+
+            message.channel.send(`\`\`\`js\n${e}\n\`\`\``)
+
+            console.log()
+
+        }
+
+    }
+
+})
+
 
 
 
