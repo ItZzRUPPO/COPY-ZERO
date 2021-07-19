@@ -542,61 +542,68 @@ ${msgs.size} messages cleared
 });
 /////////////////////////////////////////cody ban lagal unban 
 
+client.on('message' , message => {
+
+    ;
+
+    let user = message.mentions.users.first()|| client.users.get(message.content.split(' ')[1])
+
+    if(message.content.startsWith(prefix + 'unban')) {
+
+        if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('❌|**\`ADMINISTRATOR\`pewistt ba role`**');
+
+        if(!user) return  message.channel.send(`Do this ${prefix} <@ID user> \n or \n ${prefix}unban ID user`);
+
+        message.guild.unban(user);
+
+        message.guild.owner.send(` \n ${user} \n By : <@${message.author.id}>`)
+
+        var embed = new Discord.RichEmbed()
+
+        .setThumbnail(message.author.avatarURl)
+
+        .setColor("RANDOM")
+
+        .setTitle('**●Unban** !')
+
+        .addField('**●User Unban :** ', `${user}` , true)
+
+        .addField('**●By :**' ,       ` <@${message.author.id}> ` , true)
+
+        .setAuthor(message.guild.name)
+
+        message.channel.sendEmbed(embed)
+
+    }
+
+});
+
+     
+
+            
+     
+                        
+                    
+            
+                        
+                        
+         
 
 
-            );
 
-            message.guild.fetchBans().then(bans => {
 
-                if (bans.size == 0) {
 
-                    message.reply(
 
-                        new Discord.MessageEmbed()
 
-                        .setColor("RED")
 
-                        .setDescription(
 
-                            `**❌ | Thare Is No Bannded Members!**`
+  
 
-                        )
 
-                    );
 
-                };
+     
 
-                bans.forEach(ban => {
 
-                    message.guild.members.unban(ban.user.id);
-
-                    let una = bans.size;
-
-                    message.channel.send(
-
-                        new Discord.MessageEmbed()
-
-                        .setColor("GREEN")
-
-                        .setDescription(
-
-                            `**✅ | Done Unbaned ${una} Members!**`
-
-                        )
-
-                    )
-
-                });
-
-            })
-
-        } catch (e) {
-
-            message.channel.send(`\`\`\`js\n${e}\n\`\`\``)
-
-            console.log()
-
-        }
 
     }
 
