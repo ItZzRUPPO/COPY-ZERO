@@ -13,7 +13,7 @@ module.exports = {
     
     let embed = new MessageEmbed()
     .setColor("RANDOM")
-    .setTitle(`HELP ZERO!`)
+    .setTitle(`Zero Help`)
 
     .setDescription(`
  
@@ -22,7 +22,7 @@ module.exports = {
 \`userinfo\`, \`invite\`, \`uptime\`
 \`say\`, \`uinvite\`, \`roles\`
 \`stats\`, \`se\`,\`avatar\`,
-\`weather\`,\`timer\`
+\`weather\`,\`timer\`-\`rooms\`
 
 <a:ban:863095808572522547> ︙**Moderation** 
 \`ban\`, \`unban\`, \`kick\`,
