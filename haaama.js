@@ -687,7 +687,7 @@ All Members  ${message.guild.memberCount}`)
 
     if (message.member.voiceChannel) {
 
-      message.member.voiceChannel.join("861737765561696267")
+      message.member.voiceChannel.join()
 
         .then(connection => {
 
