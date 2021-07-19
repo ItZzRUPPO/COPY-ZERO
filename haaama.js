@@ -669,7 +669,7 @@ Link Support|https://discord.gg/yyJKH4NGuQ
 
     const embed = new Discord.MessageEmbed()
 
-    .setDescription(`**Members
+    .setDescription(`Server Members
 
 Online Member  ${message.guild.members.cache.filter(m=>m.presence.status == 'online').size}
 
