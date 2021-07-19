@@ -677,18 +677,6 @@ All Members  ${message.guild.memberCount}`)
 });             
 
 //////////////////////////////
-const { MessageEmbed } = require("discord.js");
-const db = require('quick.db');
-
-module.exports = {
-
-  name: `prefix`,
-
-  description: "(px)Sets a server specific Prefix",
-
-  aliases: ["px"],
-
-  cooldown: 3,
 
   edesc: `Type this Command, to set a server specific Prefix! Usage: ${PREFIX}prefix <NEW PREFIX>`,
 
