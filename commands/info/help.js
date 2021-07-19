@@ -18,7 +18,7 @@ module.exports = {
     .setDescription(`
  
 <a:king:864136523410571295> ︙**Info** 
-\`help\`, \`ping\`, \`Server\`,
+\`help\`, \`ping\`, \`Server\`,\`id\`
 \`userinfo\`, \`invite\`, \`uptime\`
 \`say\`, \`uinvite\`, \`roles\`
 \`stats\`, \`se\`,\`avatar\`,
