@@ -630,8 +630,39 @@ let devs = ["459047149942865920"];
 
 });
 
+/////////////roles code
 
+client.on("message", (smsm) => {
 
+    if (smsm.content.startsWith(prefix + "roles")) {
+
+        let Roles = smsm.guild.roles.cache.map(smsm => `"${smsm.name}" - ${smsm.id} - ${smsm.members.array().length}`).sort().join("\n");
+
+        smsm.channel.send(
+
+            new Discord.MessageEmbed()
+
+            .setAuthor(smsm.author.username, smsm.author.avatarURL({ dynamic: true }))
+
+            .setColor(smsm.member.displayHexColor)
+
+            .setFooter(client.user.username, client.user.avatarURL({ dynamic: true }))
+
+            .setTimestamp()
+
+            .setThumbnail(smsm.guild.iconURL({ dynamic: true }))
+
+            .setDescription(
+
+                "```js\n" + Roles + "\n```", { split: { char: "\n" } }
+
+            )
+
+        );
+
+    }
+
+})
 
     
 
