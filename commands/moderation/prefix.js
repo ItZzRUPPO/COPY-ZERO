@@ -4,9 +4,9 @@ const {
 
   PREFIX,
 
-  approveemoji,
+  
 
-  denyemoji
+ 
 
 } = require(`../config.json`);
 
