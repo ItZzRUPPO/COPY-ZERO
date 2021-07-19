@@ -636,7 +636,8 @@ client.on('message' , message => {
 
  
 
-    if (message.content === "-support") {
+  if (message.content === "-s") {
+  if (message.content === "-support") {
 
         if(!message.channel.guild) return message.reply('**this command only for server**');
 
