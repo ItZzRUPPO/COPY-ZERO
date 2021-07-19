@@ -8,7 +8,7 @@ module.exports = {
 
   name: "ban",
 
-  aliases: ["Ban"],
+  aliases: ["b"],
 
   description: "Ban A Member!",
 
