@@ -24,7 +24,7 @@ module.exports = {
 \`stats\` - \`avatar\` - \`support\`
 \`weather\` - \`timer\` - \`members\`
 
-<a:ban:863095808572522547> ︙**Moderation** 
+ ︙**Moderation** 
 \`ban\` - \`unban\` - \`kick\`,
 \`mute\` - \`unmute\` - \`clear\`
 \`lock\` - \`unlock\` - \`slowmode\`
