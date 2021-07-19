@@ -646,12 +646,12 @@ client.on('message' , message => {
 
  .setThumbnail(client.user.avatarURL())     
 
- .setDescription(" ***Zero Staff Support*** " + `
+ .setDescription(" ***(Zero Staff Support)*** " + `
 
  **
-
-Link server | https://discord.gg/yyJKH4NGuQ
-
+Link Supports |https://discord.gg/yyJKH4NGuQ
+ 
+////////////////////////////////////////////
  **
 
 `);
