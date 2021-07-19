@@ -24,7 +24,7 @@ module.exports = {
 \`stats\` - \`avatar\` - \`support\`
 \`weather\` - \`timer\` - \`members\`
 
- ︙**Moderation** 
+ <:HAMER:866805517975814184> ︙**Moderation** 
 \`ban\` - \`unban\` - \`kick\`,
 \`mute\` - \`unmute\` - \`clear\`
 \`lock\` - \`unlock\` - \`slowmode\`
