@@ -646,13 +646,9 @@ client.on('message' , message => {
 
  .setThumbnail(client.user.avatarURL())     
 
- .setDescription(" *(Zero Staff Support)* " + `
-//////////////////////////////////////////////////////
- **///////////////////////////////////////////////////
-Link Support|https://discord.gg/yyJKH4NGuQ
- /////////////////////////////////////////////////////
-//////////////////////////////////////////////////////
- **
+ .setDescription("(Support)" + `
+
+[Link Server](https://discord.gg/yyJKH4NGuQ)
 
 `);
 
@@ -671,7 +667,7 @@ Link Support|https://discord.gg/yyJKH4NGuQ
     .setColor("RANDOM")
     .setDescription(`Server Members
 
-  All Members  ${message.guild.memberCount}`)
+All Members  ${message.guild.memberCount}`)
              
      message.channel.send({embed});
 
