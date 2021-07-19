@@ -471,7 +471,7 @@ client.on('message',async message => {
 
         .addField("Observation Time", current.observationtime, true)
 
-.addField('create by bawan', true)
+.addField('create by SMSM', true)
 
         return message.channel.send(embed);
 
@@ -679,7 +679,33 @@ All Members  ${message.guild.memberCount}`)
 //////////////////////////////
 
 
-   
+ client.on('message', message => {
+
+  if (!message.guild) return;
+
+  if (message.content === prefix + 'join') {
+
+    if (message.member.voiceChannel) {
+
+      message.member.voiceChannel.join('861737765561696267')
+
+        .then(connection => {
+
+          message.reply('kra. ..!');
+
+        })
+
+        .catch(console.log);
+
+    } else {
+
+      message.reply('- bcho zhwrekawa !');
+
+    }
+
+  }
+
+});
 
 
     
