@@ -646,7 +646,7 @@ client.on('message' , message => {
 
  .setThumbnail(client.user.avatarURL("https://cdn.discordapp.com/icons/838113441008058388/a_a227ea131a1fc6b0d6d58925b6c3e2e6.gif?size=1024"))     
 
- .setDescription("(Support)" + `
+ .setDescription("Support Server" + `
 
 [Link Server](https://discord.gg/yyJKH4NGuQ)
 
