@@ -632,6 +632,36 @@ let devs = ["459047149942865920"];
 
 /////////////rooms code
 
+client.on('message' , message => {
+
+ 
+
+    if (message.content === "-support") {
+
+        if(!message.channel.guild) return message.reply('**this command only for server**');
+
+     const embed = new Discord.MessageEmbed()
+
+ .setColor("BLUE")
+
+ .setThumbnail(client.user.avatarURL())     
+
+ .setDescription(" ***Zero Staff Support*** " + `
+
+ **
+
+Link server | https://discord.gg/yyJKH4NGuQ
+
+ **
+
+`);
+
+  message.author.send(embed);
+
+   }
+
+});
+
 
       
 
