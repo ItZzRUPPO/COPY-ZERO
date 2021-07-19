@@ -542,57 +542,20 @@ ${msgs.size} messages cleared
 });
 /////////////////////////////////////////cody ban lagal unban 
 
-client.on("message", (message) => {
 
-    if (message.content.toLowerCase().startsWith(prefix + "ban")) {
 
-        var args = message.content.split(' ')
 
-        var member = message.mentions.users.first() || client.users.cache.get(message.content.split(' ')[1]);
 
-        var trueUser = message.guild.member(member);
 
-        var reason = message.content.split(' ').slice(3).join(' ') || 'undefined';
 
-        var time = args[2] || '1y'
 
-        if (!message.guild.me.hasPermission('BAN_MEMBERS')) return message.channel.send(new Discord.MessageEmbed().setColor("RED").setDescription("❌" + " **I Can't Bannd Any Member In This Server Becuse I Don't Have `BAN_MEMBERS` Permission!**\n Ex: " + `${prefix}ban @user 4d spam`).setFooter(`Request By ${message.author.tag}`).setTimestamp());
 
-        if (!message.member.hasPermission('BAN_MEMBERS')) return message.channel.send(new Discord.MessageEmbed().setColor("RED").setDescription("❌" + " **You Need `BAN_MEMBERS` Permission To Use This Command!**\n Ex: " + `${prefix}ban @user 4d spam`).setFooter(`Request By ${message.author.tag}`).setTimestamp());
 
-        if (!trueUser) return message.channel.send(new Discord.MessageEmbed().setColor("RED").setDescription("❌" + " **Please Mention/ID Same One!**\n Ex: " + `${prefix}ban @user 4d spam`).setFooter(`Request By ${message.author.tag}`).setTimestamp());
 
-        if (!reason) return message.channel.send(new Discord.MessageEmbed().setColor("RED").setDescription("❌" + " **Please Type Reason!**\n Ex: " + `${prefix}ban @user 4d spam`).setFooter(`Request By ${message.author.tag}`).setTimestamp());
 
-        trueUser.ban({ reason: reason }).then(() => {
 
-            message.channel.send(new Discord.MessageEmbed().setColor("GREEN").setDescription("✅" + ` **<@!${trueUser.user.id}> banned from the server ! :airplane: by:<@${message.author.id}> **`).setFooter(`Request By ${message.author.tag}`).setTimestamp())
 
-            setTimeout(() => {
 
-                message.guild.fetchBans().then(bans => {
-
-                    if (bans.size == 0) return;
-
-                    bans.forEach(ban => {
-
-                        if (ban.user.id == trueUser.user.id) {
-
-                            message.guild.members.unban(ban.user.id);
-
-                        } else console.log(ban.user.id + " => " + trueUser.user.id)
-
-                    });
-
-                });
-
-            }, ms(time))
-
-        })
-
-    }
-
-}) 
 
 
     
