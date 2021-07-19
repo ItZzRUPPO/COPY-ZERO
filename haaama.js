@@ -542,17 +542,6 @@ ${msgs.size} messages cleared
 });
 /////////////////////////////////////////cody ban lagal unban 
 
-haaama.on("message", message => {
-
-  let command = message.content.split(" ")[0];
-
-  if (command == prefix + "unban") {
-
-    if (cooldown.has(message.author.id)) {
-
-      return message.channel.send(`You have to wait 5 seconds`).then(m => {
-
-        m.delete({ timeout: cdtime * 600 });
 
       });
 
