@@ -642,15 +642,15 @@ client.on('message' , message => {
 
      const embed = new Discord.MessageEmbed()
 
- .setColor("BLUE")
+ .setColor("RANDOM")
 
  .setThumbnail(client.user.avatarURL())     
 
- .setDescription(" ***(Zero Staff Support)*** " + `
+ .setDescription(" *(Zero Staff Support)* " + `
 //////////////////////////////////////////////////////
- **
-Link Supports |https://discord.gg/yyJKH4NGuQ
- 
+ **///////////////////////////////////////////////////
+Link Support|https://discord.gg/yyJKH4NGuQ
+ /////////////////////////////////////////////////////
 //////////////////////////////////////////////////////
  **
 
