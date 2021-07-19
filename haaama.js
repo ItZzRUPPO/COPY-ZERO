@@ -644,7 +644,7 @@ client.on('message' , message => {
 
  .setColor("RANDOM")
 
- .setThumbnail(client.user.avatarURL())     
+ .setThumbnail(client.user.avatarURL("https://cdn.discordapp.com/icons/838113441008058388/a_a227ea131a1fc6b0d6d58925b6c3e2e6.gif?size=1024"))     
 
  .setDescription("(Support)" + `
 
@@ -652,7 +652,7 @@ client.on('message' , message => {
 
 `);
 
-  message.author.send(embed);
+  message.channel.send({embed});
 
    }
 
