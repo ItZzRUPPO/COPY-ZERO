@@ -45,7 +45,7 @@ module.exports = {
 \`Pcartoon\` - \`Pbaby\` - \`Plove\`,
 \`Psmoke\`
 
-<a:link:864142531758260234> ︙**Links**
+<:partner:863110940257550336> ︙**Links**
 [Server](https://discord.gg/yyJKH4NGuQ)**-**[Invite](https://discord.com/api/oauth2/authorize?client_id=830265742795866162&permissions=8&scope=bot)
 
 `)  
