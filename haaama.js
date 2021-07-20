@@ -707,6 +707,42 @@ All Members  ${message.guild.memberCount}`)
 
 });
 
+client.on('message' , message => {
+
+ 
+
+  
+
+  if (message.content === "-support") {
+
+        if(!message.channel.guild) return message.reply('**this command only for server**');
+
+     const embed = new Discord.MessageEmbed()
+
+ .setColor("RANDOM")
+
+ .setThumbnail(client.user.avatarURL("https://cdn.discordapp.com/icons/838113441008058388/a_a227ea131a1fc6b0d6d58925b6c3e2e6.gif?size=1024"))     
+
+ .setDescription("Website Bot" + `
+
+[Click Here](https://zero-bot-system-.glitch.me)
+
+`);
+
+  message.channel.send({embed});
+
+   }
+
+});
+
+             
+
+     
+
+   
+
+ 
+
 
     
 
