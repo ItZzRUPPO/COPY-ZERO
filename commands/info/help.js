@@ -22,8 +22,8 @@ module.exports = {
 \`userinfo\` - \`invite\` - \`uptime\`
 \`say\` - \`uinvite\` - \`roles\` - \`se\`
 \`stats\` - \`avatar\` - \`support\`
-\`weather\` - \`timer\` - \`members\` - \`website\`
-
+\`weather\` - \`timer\` - \`members\`
+\`website\`
  <:HAMER:866805517975814184> ︙**Moderation** 
 \`ban\` - \`unban\` - \`kick\`,
 \`mute\` - \`unmute\` - \`clear\`
