@@ -725,7 +725,7 @@ client.on('message' , message => {
 
  .setDescription("Website Bot" + `
 
-[Click Here](https://zero-bot-system-.glitch.me)
+[Click Here](https://zero-system.glitch.me)
 
 `);
 
