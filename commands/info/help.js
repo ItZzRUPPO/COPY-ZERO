@@ -17,7 +17,7 @@ module.exports = {
 
     .setDescription(`
  
-<:info:866844131484631040> ︙**Info** 
+<:emoji_213:866853582866874378> ︙**Info** 
 \`help\` - \`ping\` - \`Server\` - \`id\`
 \`userinfo\` - \`invite\` - \`uptime\`
 \`say\` - \`uinvite\` - \`roles\` - \`se\`
