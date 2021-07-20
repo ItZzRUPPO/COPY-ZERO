@@ -17,7 +17,7 @@ module.exports = {
 
     .setDescription(`
  
-<a:king:864136523410571295> ︙**Info** 
+<:info:866844131484631040> ︙**Info** 
 \`help\` - \`ping\` - \`Server\` - \`id\`
 \`userinfo\` - \`invite\` - \`uptime\`
 \`say\` - \`uinvite\` - \`roles\` - \`se\`
@@ -31,16 +31,16 @@ module.exports = {
 \`nick\` - \`hide\` - \`unhide\` 
 \`vmute\` - \`vunmute\` -\`vkick\`
 
-<a:3HyperBlob:863095794570362919> ︙**Fun**
+<:fire:866843047098187816> ︙**Fun**
 \`ascii\` - \`iq\` - \`rps\`
 \`howgay\` - \`rate\`
 
-<a:run:866009756124446780> ︙**Gifs**
+<:Cute:866821599562170398> ︙**Gifs**
 \`boy\` - \`girl\` - \`anime\`
 \`smoke\` - \`baby\` - \`love\`
 \`neon\`
 
-<a:hi:866009710800928788> ︙**Photos** 
+<:lovy:866841502272454717> ︙**Photos** 
 \`Pboy\` - \`Pgirl\` - \`Panime\`,
 \`Pcartoon\` - \`Pbaby\` - \`Plove\`,
 \`Psmoke\`
