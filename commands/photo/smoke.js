@@ -3,8 +3,8 @@ const { MessageEmbed } = require("discord.js");
 const { Prefix } = require("../../config.js");
 ///start HaaaMa
 module.exports = {
-  name: "picsmok",
-  aliases: ["psmok", "Ps"],
+  name: "picsmoke",
+  aliases: ["psmoke", "Ps"],
   description: "Show Photo",
   usage: "Photo",
   run: async (client, message, args) => {
