@@ -713,7 +713,7 @@ client.on('message' , message => {
 
   
 
-  if (message.content === "-support") {
+  if (message.content === "-website") {
 
         if(!message.channel.guild) return message.reply('**this command only for server**');
 
