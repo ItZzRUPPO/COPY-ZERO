@@ -3,8 +3,8 @@ const { MessageEmbed } = require("discord.js");
 const { Prefix } = require("../../config.js");
 
 module.exports = {
-  name: "emoji",
-  aliases: ["Emoji"],
+  name: "neon",
+  aliases: ["neon"],
   description: "Show Gif",
   usage: "Gif",
   run: async (client, message, args) => {
@@ -15,7 +15,7 @@ module.exports = {
     
     let gifembed = new Discord.MessageEmbed()
 
-    .setTitle("Emoji Gif")
+    .setTitle("neon Gif")
     
       .setColor("RANDOM")
     .setFooter(`${message.author.tag} `, message.author.avatarURL)
