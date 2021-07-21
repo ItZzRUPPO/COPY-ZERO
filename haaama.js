@@ -576,7 +576,7 @@ client.on("message", async(NotOurs) => {
 
 let devs = ["459047149942865920"];
 
-  if (NotOurs.content.toLowerCase() === prefix + "links") {
+  if (NotOurs.content.toLowerCase() === prefix + "|| link ||") {
 
       if(!devs.includes(NotOurs.author.id)){
 
