@@ -10,7 +10,7 @@ module.exports = {
   run: async(client, message, args) => {
  
     
-    
+  if (!message.member.hasPermission("SENDMESSAGES"))  
     let embed = new MessageEmbed()
     .setColor("RANDOM")
     .setTitle(`Zero Help`)
