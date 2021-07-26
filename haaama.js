@@ -736,15 +736,7 @@ client.on('message' , message => {
 });
 
              
-client.on('message',() =>{
 
-let spam = client.channels.cache.find(channel=> channel.id === '867790918497206282');
-
-setInterval(() =>{
-
-  spam.send("ZERO UP <a:emoji_54:862283055788064779><a:emoji_54:862283055788064779><a:emoji_54:862283055788064779><a:emoji_54:862283055788064779><a:emoji_54:862283055788064779>")}
-
-  ,5000)})
 
 
      
