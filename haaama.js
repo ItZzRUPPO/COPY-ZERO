@@ -13,7 +13,7 @@ const prefix = "-";
 client.on("ready", async () => {
   console.log(`ready!`);
   client.user
-       .setActivity(`${Prefix}help | ${client.guilds.cache.size} Server,Users ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)},`, { type: "Streaming" })
+       .setActivity(`${Prefix}help | ${client.guilds.cache.size} Server,Users ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)},`, { type: "playing" })
        .setActivity(`By SMSM`)
 
   .catch(error => console.log(error));
