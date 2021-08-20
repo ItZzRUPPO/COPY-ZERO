@@ -5,7 +5,7 @@ const { Prefix, Token, Color } = require("./config.js");
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 client.db = require("quick.db");
-client.login('ODMwMjY1NzQyNzk1ODY2MTYy.YHELOg.-_btjZLXSijCufRP7UGTZaMCO_w');
+client.login('ODMwMjY1NzQyNzk1ODY2MTYy.YHELOg.hO9vYCfEIWnvsbXO7_x1zG3y88M');
 const prefix = "-";
 
 ////////////////////////////////
@@ -13,7 +13,7 @@ const prefix = "-";
 client.on("ready", async () => {
   console.log(`ready!`);
   client.user
-       .setActivity(`${Prefix}help | ${client.guilds.cache.size} Server,Users ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)},`, { type: "playing" })
+       .setActivity(`${Prefix}help | ${client.guilds.cache.size} Server,Users ${client.guilds.cache.reduce((a, g) => a + g.memberCount, 0)},`, { type: "STREAMING" })
        .setActivity(`By SMSM`)
 
   .catch(error => console.log(error));
