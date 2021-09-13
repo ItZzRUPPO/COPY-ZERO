@@ -649,7 +649,7 @@ client.on('message' , message => {
 
  .setDescription("Support Server" + `
 
-[Link Server](https://discord.gg/yyJKH4NGuQ)
+[Link Server](https://discord.gg/vcK3BNtrNa)
 
 `);
 
@@ -679,35 +679,11 @@ All Members  ${message.guild.memberCount}`)
 //////////////////////////////
 
 
- client.on('message', message => {
 
-  if (!message.guild) return;
+  
 
-  if (message.content === prefix + 'join') {
 
-    if (message.member.voiceChannel) {
 
-      message.member.voiceChannel.join()
-
-        .then(connection => {
-
-          message.reply('Done');
-
-        })
-
-        .catch(console.log);
-
-    } else {
-
-      message.reply('Go To Voice');
-
-    }
-
-  }
-
-});
-
-client.on('message' , message => {
 
  
 
