@@ -709,7 +709,7 @@ All Members  ${message.guild.memberCount}`)
 
    }
 
-});
+
 
              
 
