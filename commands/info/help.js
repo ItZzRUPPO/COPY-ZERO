@@ -23,7 +23,7 @@ module.exports = {
 \`say\` - \`uinvite\` - \`roles\` - \`se\`
 \`stats\` - \`avatar\` - \`support\`
 \`weather\` - \`timer\` - \`members\`
-\`website\`
+
 **Moderation** 
 \`ban\` - \`unban\` - \`kick\`,
 \`mute\` - \`unmute\` - \`clear\`
