@@ -89,7 +89,7 @@ client.on("message", async message => {
 });
 
 
-const channelid = "861737765561696267"    //id channele vc
+const channelid = "886944896991232000"    //id channele vc
 client.on("ready", () => {
     const channel = client.channels.cache.get(channelid);
     if (!channel) return console.error("The channel does not exist!");
