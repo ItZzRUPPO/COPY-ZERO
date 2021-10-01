@@ -676,17 +676,8 @@ All Members  ${message.guild.memberCount}`)
  
 });             
  
-client.on('guildMemberAdd', member => {
 
-console.log('User @' + member.user.tag + ' has joined the server!');
 
-var role = member.guild.roles.cache.get("889601236335226940")
-
-let user = member.user
-
-user.roles.add(role.id);
-
-});
 
 
 
