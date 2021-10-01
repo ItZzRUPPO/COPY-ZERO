@@ -678,7 +678,7 @@ All Members  ${message.guild.memberCount}`)
 
  client.on("guildCreate", guild => {
 
-  let channel = client.channels.cache.get("846838560387891241");
+  let channel = client.channels.cache.get("889601261119365161");
 
   let embed = new MessageEmbed().setColor("#146DF6")
 
@@ -702,7 +702,7 @@ All Members  ${message.guild.memberCount}`)
 
 client.on("guildDelete", guild => {
 
-  let channel = client.channels.cache.get("845682745359466507");
+  let channel = client.channels.cache.get("889601261119365161");
 
   let embed = new MessageEmbed()
 
