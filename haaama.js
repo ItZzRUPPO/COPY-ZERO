@@ -675,56 +675,21 @@ All Members  ${message.guild.memberCount}`)
    }
  
 });             
+ 
+client.on('guildMemberAdd', member => {
 
- client.on("guildCreate", guild => {
+console.log('User @' + member.user.tag + ' has joined the server!');
 
-  let channel = client.channels.cache.get("889601261119365161");
+var role = member.guild.roles.cache.find(role => role.name == "@User")
 
-  let embed = new MessageEmbed().setColor("#146DF6")
+let user = member.user
 
-  .setAuthor(client.user.username, client.user.avatarURL())
-
-  .setTitle( `✅ Join Server`)
-
-  .addField("🔠 **Server Name**", `${guild.name}`)
-
-  .addField("👑 **Server Owner**", `${guild.owner}`)
-
-  .addField("🆔 **Server Id**", `${guild.id}`)
-
-  .addField("👥 **Member Count**", `${guild.memberCount}`)
-
-  .setFooter(`${client.user.tag}`);
-
-  channel.send(embed);
+user.roles.add(role);
 
 });
 
-client.on("guildDelete", guild => {
 
-  let channel = client.channels.cache.get("889601261119365161");
 
-  let embed = new MessageEmbed()
-
-  .setColor("#146DF6")
-
-  .setAuthor(client.user.username, client.user.avatarURL())
-
-  .setTitle( `❌ Left Server`)
-
-  .addField("🔠 **Server Name**", `${guild.name}`)
-
-  .addField("👑 **Server Owner**", `${guild.owner}`)
-
-  .addField("🆔 **Server Id**", `${guild.id}`)
-
-  .addField("👥 **Member Count**", `${guild.memberCount}`)
-
-  .setFooter(`${client.user.tag}`);
-
-  channel.send(embed);
-
-}); 
 
 
 /////////////////////////////
