@@ -1008,7 +1008,7 @@ All Members  ${message.guild.memberCount}`)
 /// Haaama /// HaaaMa /// HaaaMa /// HaaaMa /// HaaaMa /// HaaaMa /// HaaaMa /// HaaaMa /// HaaaMa /// HaaaMa /// HaaaMa /// HaaaMa /// HaaaMa 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-     ////     Token     ////
+     ////     OTMxNjQ5Nzg0OTU4MzA0MzM3.YeHgeQ.YhGzo21Ss1e7ANscgYmVcsx2MNI     ////
 
 
 
